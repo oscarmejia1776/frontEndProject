@@ -1,0 +1,20 @@
+body {
+  /* background-image: url(../images/background.jpeg); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+#user-section {
+  margin-bottom: auto;
+}
