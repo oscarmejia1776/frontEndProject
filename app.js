@@ -5,7 +5,6 @@ $("body").ripples({
   perturbance: 0.01,
 });
 
-// $("body").ripples("drop", x, y, radius, strength);
 //-----------------------------------Submit Button------------------------------------------------//
 $("#submit").on("click", () => {
   $.get({
@@ -18,7 +17,6 @@ $("#submit").on("click", () => {
 });
 
 //------------------------------------Data Parsing---------------------------------------------------//
-
 function parseQuote(data) {
   console.log(data);
   $(".card").empty();
@@ -35,9 +33,13 @@ function parseQuote(data) {
   );
 }
 
+//A function that creates a new card by creating an html variable that is identical to the current card, but using the zenQuote and imageUrl variables as the new input via template literal.
+//Additionally it creates an extension variable that splits the imageUrl at the "." and then uses the pop method to isolate the extension.
 function createQuoteCard(zenQuote, imageUrl) {
   const extension = imageUrl.split(".").pop();
+  //create empty mediaHTML variable
   let mediaHtml;
+  //creates conditional
   if (extension === "mp4") {
     mediaHtml = `<video controls><source src="${imageUrl}" type="video/mp4"></video>`;
   } else {
