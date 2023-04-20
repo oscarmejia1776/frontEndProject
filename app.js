@@ -58,3 +58,17 @@ function createQuoteCard(zenQuote, imageUrl) {
 `;
   return html;
 }
+
+//------------------------Audio Buttons----------------------------------//
+// Select the audio element
+var audio = $("#my_audio")[0];
+
+// Add a click event listener to the play button
+$("#playButton").on("click", function () {
+  audio.play();
+});
+
+// Add a click event listener to the pause button
+$("#pauseButton").on("click", function () {
+  audio.pause();
+});
