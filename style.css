@@ -48,6 +48,10 @@ body {
   width: 120px;
 }
 
+.card-body {
+  background-color: rgb(243, 233, 159);
+}
+
 .audio-buttons {
   position: absolute;
   top: 30%;
